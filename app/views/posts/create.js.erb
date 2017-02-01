@@ -1,0 +1,5 @@
+// const feed = document.getElementById("feed");
+// const newPost = document.create
+// feed.insertBefore(newPost, feed.firstChild);
+$("#feed").prepend("<%= escape_javascript(render @post) %>");
+

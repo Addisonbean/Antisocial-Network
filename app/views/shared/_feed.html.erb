@@ -1,0 +1,6 @@
+<ul id="feed">
+	<% @feed_items.each do |item| %>
+		<%= render item unless item.new_record? %>
+	<% end %>
+</ul>
+

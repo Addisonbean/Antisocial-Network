@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+	has_many :posts
 
 	validates :email, presence: true, length: { maximum: 256 }, uniqueness:
 		{ case_sensitive: false }, format: { with: /.+@.+/ }
