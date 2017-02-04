@@ -1,6 +1,17 @@
 class User < ApplicationRecord
 	has_many :posts
 
+	has_many :active_unfollowings, class_name: "Unfollow",
+	         foreign_key: "unfollower_id",
+			 dependent: :destroy
+
+	has_many :passive_unfollowings, class_name: "Unfollow",
+	         foreign_key: "unfollowed_id",
+			 dependent: :destroy
+
+	has_many :unfollowing, through: :active_unfollowings, source: :unfollowed
+	has_many :unfollowers, through: :passive_unfollowings, source: :unfollower
+
 	before_save { self.email = email.downcase }
 
 	validates :email, presence: true, length: { maximum: 256 }, uniqueness:
@@ -11,6 +22,14 @@ class User < ApplicationRecord
 	has_secure_password
 
 	validates :password, length: { minimum: 6 }, allow_nil: true
+
+	def unfollow(other)
+		unfollowing << other
+	end
+
+	def following?(other)
+		!unfollowing.include?(other)
+	end
 
 	def to_param
 		username

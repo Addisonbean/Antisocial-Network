@@ -5,3 +5,13 @@ valid_user:
   email: bobby@gmail.com
   password_digest: <%= User.digest("password") %>
 
+jonny:
+  username: Jonny
+  email: john@gmail.com
+  password_digest: <%= User.digest("password") %>
+
+bobby_flay:
+  username: Bobby Flay
+  email: bobbyflay@gmail.com
+  password_digest: <%= User.digest("password") %>
+
