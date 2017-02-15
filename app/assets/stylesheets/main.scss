@@ -1,5 +1,9 @@
 /*main css page this is for the title and the "tabs" at the top of the screen */
 
+* {
+	box-sizing: border-box;
+}
+
 #main-header {
 	font-size: 36pt;
 	font-family: 'Kanit', sans-serif;
@@ -7,5 +11,30 @@
 }
 
 #main-header-box {
-	background-color: 
+	/* background-color: */
 }
+
+#feed {
+	list-style: none;
+	margin: 0 auto;
+	width: 450px;
+	padding: 0;
+}
+
+.post {
+
+	border: 1px solid #676767;
+	border-radius: 4px;
+	width: 450px;
+	margin: 5px 0;
+	padding: 6px;
+
+	h3 {
+		margin: 4px 0;
+	}
+
+	p {
+		margin: 6px 0 4px;
+	}
+}
+

@@ -1,4 +1,9 @@
-<li id="post-<%= post.id %>">
-   <%= post.text_content %>
+<li class="post" id="post-<%= post.id %>">
+	<h3>
+		@<%= post.user.username %>
+	</h3>
+	<p>
+		<%= post.text_content %>
+	</p>
 </li>
 
