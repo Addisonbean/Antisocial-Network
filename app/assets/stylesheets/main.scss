@@ -31,6 +31,14 @@
 
 	h3 {
 		margin: 4px 0;
+		a {
+			color: inherit;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+				background: none;
+			}
+		}
 	}
 
 	p {

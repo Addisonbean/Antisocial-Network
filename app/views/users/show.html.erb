@@ -1,14 +1,11 @@
-<p id="notice"><%= notice %></p>
+<div class="user-profile">
+	<h2>
+		<%= @user.username %>
+	</h2>
+	<p>
+		Todo: add bio here
+	</p>
+</div>
 
-<p>
-  <strong>Username:</strong>
-  <%= @user.username %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= render "shared/feed" %>
 
