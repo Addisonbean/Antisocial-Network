@@ -11,5 +11,6 @@ Rails.application.routes.draw do
 	delete "/logout", to: "sessions#destroy"
 
 	get "/feed/:page", to: "static_pages#page", as: :feed_page
+	patch "/update_bio", to: "users#update_bio"
 
 end

@@ -3,13 +3,17 @@
 		<%= @user.username %>
 	</h2>
 	<p id="user-bio">
-		Todo: add bio here
+		<%= @user.bio %>
 	</p>
-	<textarea id="user-bio-textarea"></textarea>
-	<% if current_user == @user %>
-		<input type="button" value="Edit Bio" id="edit-bio-button">
-		<input type="button" value="Update Bio" id="update-bio-button">
-		<input type="button" value="Cancel" id="cancel-bio-button">
+	<%= form_tag(update_bio_path, remote: true, method: :patch) do %>
+		<!-- <textarea id="user-bio-textarea"></textarea> -->
+		<%= text_area_tag "user-bio-textarea" %>
+		<% if current_user == @user %>
+			<input type="button" value="Edit Bio" id="edit-bio-button">
+			<!-- <input type="button" value="Update Bio" id="update-bio-button"> -->
+			<%= submit_tag "Update bio", id: "update-bio-button" %>
+			<input type="button" value="Cancel" id="cancel-bio-button">
+		<% end %>
 	<% end %>
 </div>
 
