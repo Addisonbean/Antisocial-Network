@@ -23,6 +23,8 @@ class User < ApplicationRecord
 
 	validates :password, length: { minimum: 6 }, allow_nil: true
 
+	validates :bio, length: { maximum: 256 }
+
 	def unfollow(other)
 		unfollowing << other
 	end

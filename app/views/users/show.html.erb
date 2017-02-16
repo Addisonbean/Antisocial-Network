@@ -1,11 +1,44 @@
-<div class="user-profile">
+<div id="user-profile">
 	<h2>
 		<%= @user.username %>
 	</h2>
-	<p>
+	<p id="user-bio">
 		Todo: add bio here
 	</p>
+	<textarea id="user-bio-textarea"></textarea>
+	<% if current_user == @user %>
+		<input type="button" value="Edit Bio" id="edit-bio-button">
+		<input type="button" value="Update Bio" id="update-bio-button">
+		<input type="button" value="Cancel" id="cancel-bio-button">
+	<% end %>
 </div>
 
 <%= render "shared/feed" %>
+
+<script>
+$("#edit-bio-button").click(function() {
+	const bioParagraph = $("#user-bio");
+	const textarea = $("#user-bio-textarea");
+
+	textarea.css("display", "block");
+	textarea.val($.trim(bioParagraph.text()));
+
+	bioParagraph.css("display", "none");
+
+	$(this).css("display", "none");
+	$("#update-bio-button").css("display", "inline");
+	$("#cancel-bio-button").css("display", "inline");
+});
+
+$("#cancel-bio-button").click(function() {
+	$("#user-bio-textarea").css("display", "none");
+
+	$("#user-bio").css("display", "block");
+
+	$(this).css("display", "none");
+	$("#update-bio-button").css("display", "none");
+	$("#edit-bio-button").css("display", "inline");
+});
+
+</script>
 
