@@ -2,5 +2,8 @@
 	<% @feed_items.each do |item| %>
 		<%= render item unless item.new_record? %>
 	<% end %>
+	<%= form_tag(feed_page_path(@page + 1), remote: true, method: :get, id: "load-more") do %>
+		<%= submit_tag "Load more posts..." %>
+	<% end %>
 </ul>
 

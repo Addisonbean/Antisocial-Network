@@ -1,9 +1,20 @@
 class StaticPagesController < ApplicationController
+
+	POSTS_PER_PAGE = 20
+
 	def home
 		if logged_in?
-			#@feed_items = current_user.posts
-			@feed_items = Post.all
 			@post = current_user.posts.build
+			@page = 1
+			@feed_items = Post.page(@page).per(POSTS_PER_PAGE)
+		end
+	end
+
+	def page
+		@page = params[:page].to_i
+		@feed_items = Post.page(@page).per(POSTS_PER_PAGE)
+		respond_to do |format|
+			format.js
 		end
 	end
 end

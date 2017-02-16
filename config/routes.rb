@@ -10,4 +10,6 @@ Rails.application.routes.draw do
 	post   "/login",  to: "sessions#create"
 	delete "/logout", to: "sessions#destroy"
 
+	get "/feed/:page", to: "static_pages#page", as: :feed_page
+
 end
