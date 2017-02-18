@@ -10,6 +10,20 @@ class UsersController < ApplicationController
 	# GET /users/1
 	# GET /users/1.json
 	def show
+		@feed_items = @user.posts
+		@page = nil
+	end
+
+	def update_bio
+		if logged_in?
+			@new_bio = params[:'user-bio-textarea']
+			current_user.bio = @new_bio
+			current_user.save
+		end
+
+		respond_to do |format|
+			format.js
+		end
 	end
 
 	# GET /users/new

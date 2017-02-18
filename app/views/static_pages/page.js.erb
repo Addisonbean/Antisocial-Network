@@ -1,0 +1,6 @@
+$("#load-more").before("<%= @feed_items.map do |item|
+	escape_javascript(render(item)) unless item.new_record?
+end.join("").html_safe %>");
+
+$("#load-more").attr("action", "<%= feed_page_path(@page + 1) %>");
+

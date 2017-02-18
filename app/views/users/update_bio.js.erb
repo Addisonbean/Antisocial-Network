@@ -1,0 +1,12 @@
+$("#user-bio-textarea").css("display", "none");
+
+$("#user-bio").css("display", "block");
+
+$("#cancel-bio-button").css("display", "none");
+$("#update-bio-button").css("display", "none");
+$("#edit-bio-button").css("display", "inline");
+
+<% if @new_bio %>
+	$("#user-bio").text("<%= escape_javascript(@new_bio) %>");
+<% end %>
+

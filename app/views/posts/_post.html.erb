@@ -1,6 +1,6 @@
 <li class="post" id="post-<%= post.id %>">
 	<h3>
-		@<%= post.user.username %>
+		<%= link_to "@#{post.user.username}", post.user %>
 	</h3>
 	<p>
 		<%= post.text_content %>
