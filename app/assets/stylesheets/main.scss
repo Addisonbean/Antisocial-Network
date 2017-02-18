@@ -4,16 +4,39 @@
 	box-sizing: border-box;
 }
 
-#main-header {
-	font-size: 36pt;
+body {
 	font-family: 'Kanit', sans-serif;
-	background-color: red;
-	color: white;
-	padding: 0;
-	border: 2px solid black;
-	padding-top: 5px;
-	padding-bottom: 5px;
+}
 
+#navigation-header {
+	float: left;
+	margin: 4px 0;
+	color: white;
+}
+
+#navigation {
+	float: right;
+	list-style: none;
+	margin: 4px 0;
+
+	li {
+		display: inline-block;
+		margin: 4px;
+	}
+}
+
+#menu {
+	background-color: #bf2621;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
 }
 
 #main-header-box {

@@ -13,6 +13,41 @@
   </head>
 
   <body>
-    <%= yield %>
+
+
+<div id="menu" class="clearfix">
+  
+<h1 id="navigation-header"> Anti-Social Network </h1>
+<ul id="navigation">
+    
+    
+  <% if logged_in? %>
+  
+    <li>Friends</li>
+    <li>Feeed!</li>
+
+    <li>
+      <%= link_to "Logout", logout_path, method: :delete %>
+    </li>
+
+
+  <% else %>
+
+    <li>
+      <%= link_to "Signup!", new_user_path %>
+    </li>
+    <li>
+      <%= link_to "Login!", login_path %>  
+    </li>
+  
+  <% end %>
+
+</ul>
+</div>
+    
+
+<%= yield %>
+
+
   </body>
 </html>
