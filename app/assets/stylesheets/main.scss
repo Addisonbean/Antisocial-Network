@@ -19,14 +19,21 @@ body {
 	list-style: none;
 	margin: 4px 0;
 
+
+
 	li {
 		display: inline-block;
 		margin: 4px;
+
+		a {
+			color: white;
+		}
 	}
 }
 
 #menu {
 	background-color: #bf2621;
+	padding: 15px;
 }
 
 .clearfix:before,
@@ -39,9 +46,6 @@ body {
 	clear: both;
 }
 
-#main-header-box {
-	/* background-color: */
-}
 
 #feed {
 	list-style: none;
