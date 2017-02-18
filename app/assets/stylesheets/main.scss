@@ -27,6 +27,12 @@ body {
 
 		a {
 			color: white;
+			padding: 2px;
+
+			&:hover {
+				background-color: black;
+				padding: 2px;
+			}
 		}
 	}
 }
@@ -77,6 +83,24 @@ body {
 	p {
 		margin: 6px 0 4px;
 	}
+}
+
+
+
+/* creating a new user */
+
+#new-user {
+	width: 200px;
+	margin: 0 auto;
+
+	input[type="text"], input[type="password"] {
+		width: 100%;
+	}
+
+}
+
+#new-user-heading {
+	text-align: center;
 }
 
 /* user profile stuff */
