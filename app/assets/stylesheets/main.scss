@@ -19,8 +19,6 @@ body {
 	list-style: none;
 	margin: 4px 0;
 
-
-
 	li {
 		display: inline-block;
 		margin: 4px;
@@ -35,6 +33,40 @@ body {
 			}
 		}
 	}
+}
+
+#notifications-dropdown {
+	position: absolute;
+	padding: 0;
+	margin: 22px 0;
+	margin-left: -108px;
+	background-color: #eee;
+	border: 1px solid #555;
+	border-radius: 3px;
+	width: 300px;
+	display: none;
+
+	li {
+		display: block;
+		border-bottom: 1px solid #555;
+		margin: 4px 16px;
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	#no-notifications {
+		margin: 8px 0;
+		text-align: center;
+	}
+}
+
+.notification-footer {
+	//float: right;
+	font-size: 0.8em;
+	color: #676767;
+	margin: 4px 0;
 }
 
 #menu {

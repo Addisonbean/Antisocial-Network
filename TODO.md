@@ -8,6 +8,9 @@
 - Also, fix the feeds not on the main page
 - Add more tests
 - Add profile pics
+- Time zone issues (with notification times)
+- Upgrade to a better server thing
+- Liking and dislike posts
 
 Links:
 https://www.sitepoint.com/infinite-scrolling-rails-basics/

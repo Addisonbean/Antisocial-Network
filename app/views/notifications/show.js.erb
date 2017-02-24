@@ -1,0 +1,10 @@
+<% if @notifications.count > 0 %>
+	$("#notifications-dropdown").html("<%=
+		@notifications.map do |n|
+			escape_javascript(render(n))
+		end.join("").html_safe
+	%>").css("display", "block");
+<% else %>
+	$("#notifications-dropdown").html("<li><p id='no-notifications'>You have no notifications!</p></li>").css("display", "block");
+<% end %>
+

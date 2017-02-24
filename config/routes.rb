@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 	get "/feed/:page", to: "static_pages#page", as: :feed_page
 	patch "/update_bio", to: "users#update_bio"
 
+	get "/notifications", to: "notifications#show"
+
 end
