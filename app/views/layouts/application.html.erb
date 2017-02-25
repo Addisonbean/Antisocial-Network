@@ -26,7 +26,7 @@
   <% if logged_in? %>
   
 	<li>
-		<%= link_to "Notifications", notifications_path, remote: true %>
+		<%= link_to "Notifications", notifications_path, id: "notifications-link", remote: true %>
 		<ul id="notifications-dropdown"></ul>
 	</li>
     <li>Friends</li>
