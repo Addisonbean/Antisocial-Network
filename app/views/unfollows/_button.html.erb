@@ -1,0 +1,8 @@
+<% if current_user.following?(@user) %>
+	<%= link_to "Unfollow", unfollow_user_path(@user), id: "unfollow-button", remote: true %>
+<% else %>
+	<p id="unfollow-button">
+		You are unfollowing this user.
+	</p>
+<% end %>
+

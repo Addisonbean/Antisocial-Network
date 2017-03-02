@@ -15,4 +15,6 @@ Rails.application.routes.draw do
 
 	get "/notifications", to: "notifications#show"
 
+	get "/unfollow/:username", to: "unfollows#unfollow", as: :unfollow_user
+
 end
