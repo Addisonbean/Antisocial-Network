@@ -10,6 +10,11 @@ class UsersController < ApplicationController
 	# GET /users/1
 	# GET /users/1.json
 	def show
+		if @user.nil?
+			@username = params[:username]
+			render "user-not-found"
+			return
+		end
 		@feed_items = @user.posts
 		@page = nil
 	end
