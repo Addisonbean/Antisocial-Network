@@ -2,6 +2,8 @@ class User < ApplicationRecord
 	has_many :posts
 	has_many :notifications
 
+	has_many :likes
+
 	has_many :active_unfollowings, class_name: "Unfollow",
 	         foreign_key: "unfollower_id",
 			 dependent: :destroy

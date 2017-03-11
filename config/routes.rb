@@ -17,4 +17,6 @@ Rails.application.routes.draw do
 
 	get "/unfollow/:username", to: "unfollows#unfollow", as: :unfollow_user
 
+	post "/like/:post_id", to: "likes#create", as: :like_post
+
 end
