@@ -45,4 +45,12 @@ class User < ApplicationRecord
 		BCrypt::Password.create(str, cost: cost)
 	end
 
+	def notify(msg)
+		n = notifications.build
+		n.text_content = msg
+		n.viewed = false
+		n.save
+		# update if their logged in?
+	end
+
 end

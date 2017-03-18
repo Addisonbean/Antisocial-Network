@@ -1,5 +1,5 @@
 <li>
-	<%= notification.text_content %>
+	<%= notification.text_content.html_safe %>
 	<p class="notification-footer">
 		<%= notification.created_at.strftime("%I:%M %P, %m/%d/%y") %>
 	</p>

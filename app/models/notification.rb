@@ -1,9 +1,10 @@
 class Notification < ApplicationRecord
 	belongs_to :user
 
-	scope :unviewed, -> { where viewed: false }
+	scope :unviewed, -> { where(viewed: false).order(created_at: :desc) }
 
 	def view
-		viewed = true
+		self.viewed = true
+		self.save
 	end
 end

@@ -51,6 +51,15 @@ body {
 		border-bottom: 1px solid #555;
 		margin: 4px 16px;
 
+		a {
+			color: inherit;
+			text-decoration: none;
+			&:hover {
+				background: none;
+				text-decoration: underline;
+			}
+		}
+
 		&:last-child {
 			border-bottom: none;
 		}
