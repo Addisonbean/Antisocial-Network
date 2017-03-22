@@ -26,7 +26,13 @@
   <% if logged_in? %>
   
 	<li>
-		<%= link_to "Notifications", notifications_path, id: "notifications-link", remote: true %>
+		<!--<%= link_to "Notifications (#{current_user.notification_count})", notifications_path, id: "notifications-link", remote: true %>-->
+
+		<%= link_to(notifications_path, id: "notifications-link", remote: true) do %>
+			Notifications
+			(<span id="notification-count"><%= current_user.notification_count %></span>)
+		<% end %>
+
 		<ul id="notifications-dropdown"></ul>
 	</li>
     <li>Friends</li>

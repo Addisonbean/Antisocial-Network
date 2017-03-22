@@ -12,6 +12,9 @@
 - Upgrade to a better server thing
 - Liking and dislike posts
 - Show an error if a post doesn't meet the requirements
+- Show errors to the user/feedback
+- Real time post updating
+- Notification counter
 
 Links:
 https://www.sitepoint.com/infinite-scrolling-rails-basics/

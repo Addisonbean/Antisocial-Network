@@ -53,4 +53,8 @@ class User < ApplicationRecord
 		# update if their logged in?
 	end
 
+	def notification_count
+		notifications.unviewed.count
+	end
+
 end
