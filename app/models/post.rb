@@ -7,4 +7,9 @@ class Post < ApplicationRecord
 	scope :not_from, ->(users) { where.not(user_id: users) }
 
 	validates :text_content, length: { maximum: 256 }, presence: true
+
+	def liked_by?(user)
+		likes.any? { |l| l.user == user }
+	end
+
 end

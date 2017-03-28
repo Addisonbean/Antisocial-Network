@@ -8,6 +8,15 @@ body {
 	font-family: 'Kanit', sans-serif;
 }
 
+#logo-link {
+	color: white;
+	text-decoration: none;
+	&:hover {
+		background: none;
+		text-decoration: none;
+	}
+}
+
 #navigation-header {
 	float: left;
 	margin: 4px 0;
@@ -150,6 +159,21 @@ body {
 	width: 250px;
 	border: 1px solid black;
 	padding: 0 14px;
+}
+
+.like-container input[type=submit] {
+	border: none;
+	background: none;
+	color: gray;
+	font-size: 11px;
+
+	&:hover {
+		color: #DB6D6D;
+	}
+}
+
+.liked-post {
+	color: red !important;
 }
 
 #user-bio {

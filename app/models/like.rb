@@ -7,4 +7,5 @@ class Like < ApplicationRecord
 	def message_from(user)
 		"<a href='#{user_path(user)}'>@#{CGI::escapeHTML user.username}</a> liked your post!".html_safe
 	end
+
 end

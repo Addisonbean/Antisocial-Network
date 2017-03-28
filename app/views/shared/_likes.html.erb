@@ -1,7 +1,7 @@
-<%= pluralize post.likes.count, "like" %>
 <%= form_for(:like, url: like_post_path(post), remote: true) do |f| %>
 	<%= f.hidden_field :post_id, value: post.id %>
-	<%= f.submit "heart it" %>
+	<% daClass = post.liked_by?(current_user) ? "liked-post" : "" %>
+	<%= f.submit "&#x2764; #{post.likes.count}".html_safe, class: daClass %>
 <% end %>
 
 
