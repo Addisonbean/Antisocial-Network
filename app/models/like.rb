@@ -5,7 +5,7 @@ class Like < ApplicationRecord
 	belongs_to :post
 
 	def message_from(user)
-		"<a href='#{user_path(user)}'>@#{CGI::escapeHTML user.username}</a> liked your post!".html_safe
+		"<a href='#{user_path(user)}'>– #{CGI::escapeHTML user.username}</a> liked your post!".html_safe
 	end
 
 end

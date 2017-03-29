@@ -8,8 +8,30 @@
 
 	<% else %>
 
-	<p> xplanation of our project.</p>
+	<p> Welcome to the Anti-Social Network! Here you will find that this is unloke any other social media site. You start out being friends with everyone and are only able to unfriend people. That about sums it up for now, enjoy our website!</p>
 
+<div id="mainPageLogin">
+
+	<div id="new-user">
+	<h1 id="new-user-heading">New User</h1>
+
+	<%= render 'users/form', user: User.new %>
+
+	</div>
+
+
+<%= form_for(:session, url: login_path) do |f| %>
+
+		<%= f.label :username %>
+		<%= f.text_field :username %>
+
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+
+		<%= f.submit "Log in." %>
+
+<% end %>
+</div>
 
 <% end %>
 
