@@ -6,8 +6,8 @@
 
 body {
 	font-family: 'Kanit', sans-serif;
-	background-image: url("3870708_orig.jpg");
-	background-size: 100%;
+	/*background-image: url("3870708_orig.jpg");*/
+	background-color: #ce3339;
 }
 
 #logo-link {
@@ -225,4 +225,25 @@ p#unfollow-button {
 
 #Xplanation {
 	font-weight: 700;
+	height: 60px;
+	width: 50%;
+}
+
+
+/* Posts */
+
+#createposts {
+	background-color: #ce3339;
+	text-align: center;
+	margin: 2em auto;
+	padding: 10px;
+	width: 450px;
+	font-weight: bold;
+	color: white;
+	letter-spacing: .05em;
+}
+
+#text_area {
+	resize: vertical;
+	width: 400px;
 }

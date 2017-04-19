@@ -3,13 +3,16 @@
 
 
 	<% if logged_in? %>
+<div id="createposts">
 	<%= render "posts/form", post: @post %>
+</div>
+
 	<%= render "shared/feed" %>
 
 	<% else %>
 
 <div id="Xplanation">
-	<p> Welcome to the Anti-Social Network! Here you will find that this is unloke any other social media site. You start out being friends with everyone and are only able to unfriend people. That about sums it up for now, enjoy our website!</p>
+	<p> Welcome to the Anti-Social Network! Here you will find that this is unlike any other social media site. You start out being friends with everyone and are only able to unfriend people. That about sums it up for now, enjoy our website!</p>
 </div>
 	
 <div id="mainPageLogin">
