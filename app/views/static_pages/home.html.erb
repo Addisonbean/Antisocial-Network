@@ -2,13 +2,18 @@
 
 
 
-	<% if logged_in? %>
-	<%= render "posts/form", post: @post %>
-	<%= render "shared/feed" %>
+<% if logged_in? %>
 
-	<% else %>
+	<div class="home-container">
+		<div class="post-form">
+			<%= render "posts/form", post: @post %>
+		</div>
+		<%= render "shared/feed" %>
+	</div>
 
-	<p> xplanation of our project.</p>
+<% else %>
+
+	<p>Explanation of our project...</p>
 
 
 <% end %>

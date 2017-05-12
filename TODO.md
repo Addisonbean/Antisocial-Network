@@ -10,7 +10,7 @@
 - Add profile pics
 - Time zone issues (with notification times)
 - Upgrade to a better server thing
-- Liking and dislike posts
+- Dislike posts
 - Show an error if a post doesn't meet the requirements
 - Show errors to the user/feedback
 - Real time post updating
