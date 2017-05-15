@@ -31,12 +31,17 @@
 
 	<%= form_for(:session, url: login_path) do |f| %>
 
+	<h1 id="new-user-heading">Existing user</h1>
+	
 		<%= f.label :username %>
 		<%= f.text_field :username %>
+		
 
 		<%= f.label :password %>
 		<%= f.password_field :password %>
 
+		<br>
+		<br>
 		<%= f.submit "Log in." %>
 
 	<% end %>
