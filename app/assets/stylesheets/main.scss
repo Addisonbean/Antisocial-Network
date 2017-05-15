@@ -234,18 +234,41 @@ p#unfollow-button {
 
 
 #mainPageLogin {
-	float: right;
+	float: left;
 	border: 1px solid black;
-	margin: 5em;
+	//margin: 5em;
 	border-radius: 6px;
 	padding: 12px;
 	box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
+	//width: 25%;
+	// 20 + 33 = 53
+	width: 100%;
+	margin: 53px 0;
+
+}
+
+#existing-user {
+	margin: 0 auto;
+	width: 200px;
+	input[type=text], input[type=password] {
+		width: 100%;
+	}
 }
 
 #Xplanation {
-	font-weight: 700;
+	/* font-weight: 700; */
+	float: left;
 	height: 60px;
-	width: 50%;
+	margin: 20px 0;
+	padding: 16px 50px;
+	width: 75%;
+	//margin-left: 25px;
+}
+
+.extra-space {
+	float: left;
+	width: 25%;
+	padding: 0 40px;
 }
 
 

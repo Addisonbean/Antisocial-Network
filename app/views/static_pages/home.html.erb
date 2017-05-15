@@ -16,35 +16,37 @@
 <% else %>
 
 <div id="Xplanation">
-	<p> Welcome to the Anti-Social Network! Here you will find that this is unlike any other social media site. You start out being friends with everyone and are only able to unfriend people. That about sums it up for now, enjoy our website!</p>
+	<p>Welcome to the Antisocial-Network! The Antisocial-Network is unlike any other social network. After signing up, you will be friends with everyone else on the site. From there, you may unfriend people whose posts you do not wish to see. </p>
+
 </div>
 	
-<div id="mainPageLogin">
+<div class="extra-space">
+	<div id="mainPageLogin">
 
-	<div id="new-user">
-	<h1 id="new-user-heading">New User</h1>
+		<div id="new-user">
+		<h1 id="new-user-heading">New User</h1>
 
-	<%= render 'users/form', user: User.new %>
+			<%= render 'users/form', user: User.new %>
 
-	</div>
+		</div>
 
 
-	<%= form_for(:session, url: login_path) do |f| %>
-
-	<h1 id="new-user-heading">Existing user</h1>
-	
-		<%= f.label :username %>
-		<%= f.text_field :username %>
+		<%= form_for(:session, url: login_path, html: { id: "existing-user" }) do |f| %>
+			<h1 id="new-user-heading">Existing user</h1>
 		
+			<%= f.label :username %>
+			<%= f.text_field :username %>
+			
 
-		<%= f.label :password %>
-		<%= f.password_field :password %>
+			<%= f.label :password %>
+			<%= f.password_field :password %>
 
-		<br>
-		<br>
-		<%= f.submit "Log in." %>
+			<br>
+			<br>
+			<%= f.submit "Log in." %>
 
-	<% end %>
+		<% end %>
+	</div>
 </div>
 
 <% end %>
