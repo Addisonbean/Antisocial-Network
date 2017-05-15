@@ -54,11 +54,21 @@ body {
 	list-style: none;
 	margin: 4px 0;
 
+	li.main-item {
+		box-shadow: 4px 4px 2px -2px rgba(0,0,0,0.75);
+		position: relative;
+		&:hover {
+			box-shadow: none;
+			right: -2px;
+			bottom: -2px;
+		}
+	}
+
 	li {
 		display: inline-block;
 		margin: 4px;
 		border: 1px solid #eaeaea;
-		padding: 6px;
+		padding: 10px 6px;
 
 		a {
 			color: white;
