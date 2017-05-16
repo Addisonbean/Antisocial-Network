@@ -7,20 +7,23 @@
 body {
 	font-family: 'Kanit', sans-serif;
 	/*background-image: url("3870708_orig.jpg");*/
-	background-color: #ce3339;
+	/*background-color: ;*/
 }
 
 .home-container {
 	width: 760px;
 	margin: 0 auto;
+	background-color: #eaeaea;
 }
 
 .post-form {
 	margin: 16px auto;
 	padding: 8px;
-	border: 1px solid black;
+	border: 1px  solid #808080;
 	border-radius: 4px;
 	width: 450px;
+	background-color: white; 
+	box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.5);
 	textarea {
 		width: 100%;
 		margin: 6px 0;
@@ -54,14 +57,18 @@ body {
 	li {
 		display: inline-block;
 		margin: 4px;
+		border: 1px solid #eaeaea;
+		padding: 6px;
 
 		a {
 			color: white;
 			padding: 2px;
+			text-decoration: none;
+			background-color: none;
 
 			&:hover {
-				background-color: black;
-				padding: 2px;
+				text-decoration: underline;
+				background-color: none;
 			}
 		}
 	}
@@ -140,6 +147,7 @@ body {
 	width: 450px;
 	margin: 5px 0;
 	padding: 6px;
+	background-color: white;
 
 	h3 {
 		margin: 4px 0;
@@ -252,7 +260,7 @@ p#unfollow-button {
 /* Posts */
 
 #createposts {
-	background-color: #ce3339;
+	background-color: white;
 	text-align: center;
 	margin: 2em auto;
 	padding: 10px;
