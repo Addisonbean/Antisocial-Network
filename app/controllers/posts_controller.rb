@@ -30,6 +30,9 @@ class PostsController < ApplicationController
 			if @post.save
 				format.html { redirect_to root_path }
 				format.js
+			else
+				format.html
+				format.js { render "errors" }
 			end
 		end
 

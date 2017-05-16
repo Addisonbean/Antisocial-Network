@@ -10,6 +10,27 @@ body {
 	background-color: #ce3339;
 }
 
+.home-container {
+	width: 760px;
+	margin: 0 auto;
+}
+
+.post-form {
+	margin: 16px auto;
+	padding: 8px;
+	border: 1px solid black;
+	border-radius: 4px;
+	width: 450px;
+	textarea {
+		width: 100%;
+		margin: 6px 0;
+	}
+
+	.field, .actions {
+		margin-bottom: 0;
+	}
+}
+
 #logo-link {
 	color: white;
 	text-decoration: none;
@@ -216,11 +237,9 @@ p#unfollow-button {
 	float: right;
 	border: 1px solid black;
 	margin: 5em;
-	border-radius: 8px;
-	padding: 5px;
-	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.5);
-
-
+	border-radius: 6px;
+	padding: 12px;
+	box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
 }
 
 #Xplanation {
